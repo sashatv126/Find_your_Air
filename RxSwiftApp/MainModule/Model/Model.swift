@@ -44,3 +44,4 @@ extension ModelResponseElement : Hashable {
     }
 }
 
+typealias ModelResponse = [ModelResponseElement]

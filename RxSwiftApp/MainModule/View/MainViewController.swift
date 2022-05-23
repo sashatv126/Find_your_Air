@@ -15,16 +15,46 @@ class MainViewController: UIViewController, Storyboardable {
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    private static let cellId = "AirportID"
+    
+    private var bag = DisposeBag()
+    
+    private lazy var datasource = RxTableViewSectionedReloadDataSource<CityItemsSection>(configureCell: { _,tableView,indexPth,item  in
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainViewController.cellId, for: indexPth) as? AirportCells
+        cell?.configure(usingViewModel: item)
+        return cell ?? UITableViewCell()
+    } )
+     
     private var viewModel : MainVIewModelProtocol?
     var viewModelBuilder : MainVIewModelProtocol.ViewModelBuilder?
      
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = viewModelBuilder?((
+            
             searchText : searchText.rx.text.orEmpty.asDriver(), ()
         ))
-        self.title = "Airports"
+        setupUI()
+        setupBinding()
     }
-
 }
 
+private extension MainViewController {
+    
+    func setupUI() -> Void {
+        
+        tableView.rowHeight = 100
+        tableView.register(UINib(nibName: "AirportCells", bundle: nil), forCellReuseIdentifier: MainViewController.cellId)
+        self.title = "Airports"
+    }
+    
+    func setupBinding() -> Void {
+        
+        self.viewModel?
+            .output
+            .cities
+            .drive(tableView.rx.items(dataSource : self.datasource))
+            .disposed(by: bag)
+    }
+}

@@ -1,4 +1,5 @@
 import RxSwift
+import Alamofire
 
 class ModelService {
     
@@ -8,7 +9,7 @@ class ModelService {
 
 extension ModelService : ModelAPI {
     
-    func fetchModel() -> Single<[ModelResponseElement]> {
+    func fetchModel() -> Single<ModelResponse> {
         
         return Single.create { [httpService] (single) -> Disposable in
             
@@ -16,25 +17,13 @@ extension ModelService : ModelAPI {
                 try  ModelHTTPRouter
                     .getModels
                     .request(usingHTTPService: httpService)
-                    .responseJSON {(result) in
-                    
-                    guard let data = result.data else { return }
-                    
-                    do {
-                        let model = try JSONDecoder().decode(
-                            [ModelResponseElement].self, from: data)
-                        single(.success(model))
-                        print("Airports: \(model)")
-                    } catch {
-                        print("NO (")
-                    }
-            
-                }
+                    .responseDecodable(completionHandler: { (result : DataResponse<ModelResponse, AFError>) in
+                        let data = try? result.result.get()
+                        single(.success(data!))
+                    })
             } catch {
-                
+                single(.failure(error))
             }
-            
-           
             
             return Disposables.create()
         }

@@ -28,6 +28,9 @@
 		E767CAFE2837878B00AEA8EC /* ModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767CAFD2837878B00AEA8EC /* ModelAPI.swift */; };
 		E767CB0228378AA900AEA8EC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767CB0128378AA800AEA8EC /* Model.swift */; };
 		E767CB062837B60200AEA8EC /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767CB052837B60200AEA8EC /* Network.swift */; };
+		E774F025283B71AB00623098 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774F024283B71AB00623098 /* CityViewModel.swift */; };
+		E774F02E283B979D00623098 /* AirportCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774F02C283B979D00623098 /* AirportCells.swift */; };
+		E774F02F283B979D00623098 /* AirportCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = E774F02D283B979D00623098 /* AirportCells.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		E767CAFD2837878B00AEA8EC /* ModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAPI.swift; sourceTree = "<group>"; };
 		E767CB0128378AA800AEA8EC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E767CB052837B60200AEA8EC /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E774F024283B71AB00623098 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		E774F02C283B979D00623098 /* AirportCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCells.swift; sourceTree = "<group>"; };
+		E774F02D283B979D00623098 /* AirportCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportCells.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 		E767CABF2834BFFA00AEA8EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E774F027283B96E800623098 /* Cell */,
 				E767CAA52834BE0F00AEA8EC /* MainViewController.swift */,
 			);
 			path = View;
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E767CAC52834CE4B00AEA8EC /* MainVIewModel.swift */,
+				E774F024283B71AB00623098 /* CityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +237,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		E774F027283B96E800623098 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E774F02C283B979D00623098 /* AirportCells.swift */,
+				E774F02D283B979D00623098 /* AirportCells.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E767CAAE2834BE1400AEA8EC /* LaunchScreen.storyboard in Resources */,
+				E774F02F283B979D00623098 /* AirportCells.xib in Resources */,
 				E767CAAB2834BE1400AEA8EC /* Assets.xcassets in Resources */,
 				E767CAA92834BE0F00AEA8EC /* Main.storyboard in Resources */,
 			);
@@ -350,6 +368,7 @@
 				E767CAF7283780AF00AEA8EC /* ModelHTTPRouter.swift in Sources */,
 				E767CAA42834BE0F00AEA8EC /* SceneDelegate.swift in Sources */,
 				E767CAF128377F1E00AEA8EC /* HTTPService.swift in Sources */,
+				E774F025283B71AB00623098 /* CityViewModel.swift in Sources */,
 				E767CB0228378AA900AEA8EC /* Model.swift in Sources */,
 				E767CAFB2837875400AEA8EC /* ModelService.swift in Sources */,
 				E767CADD2834D64E00AEA8EC /* Storyboardable.swift in Sources */,
@@ -358,6 +377,7 @@
 				E767CAF428377FEA00AEA8EC /* ModelHTTPService.swift in Sources */,
 				E767CAD22834D39000AEA8EC /* MainCoordinator.swift in Sources */,
 				E767CAE02834DA5000AEA8EC /* AppCoordinator.swift in Sources */,
+				E774F02E283B979D00623098 /* AirportCells.swift in Sources */,
 				E767CAC62834CE4B00AEA8EC /* MainVIewModel.swift in Sources */,
 				E767CAD82834D53700AEA8EC /* BaseCoordinator.swift in Sources */,
 			);

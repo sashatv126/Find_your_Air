@@ -2,5 +2,5 @@ import RxSwift
 
 protocol ModelAPI {
     
-    func fetchModel() -> Single<[ModelResponseElement]>
+    func fetchModel() -> Single<ModelResponse>
 }
