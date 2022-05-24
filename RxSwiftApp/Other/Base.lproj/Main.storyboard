@@ -26,6 +26,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="text:" destination="BYZ-38-t0r" eventType="editingChanged" id="0sO-IG-lwP"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,15 +43,56 @@
                                 <rect key="frame" x="0.0" y="166" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-wg-Ssn">
+                                <rect key="frame" x="0.0" y="166" width="414" height="730"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dTn-aY-ZRK">
+                                        <rect key="frame" x="16" y="170" width="382" height="261"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="400" verticalHuggingPriority="251" image="10134" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-sr-pI2">
+                                                <rect key="frame" x="34" y="0.0" width="314" height="222"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="222" id="DSF-qy-MMv"/>
+                                                    <constraint firstAttribute="width" constant="314" id="v1h-BG-xbX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's find Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hy-Jf-Sxw">
+                                                <rect key="frame" x="86.5" y="222" width="209" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="QvA-fO-Qdh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="dTn-aY-ZRK" firstAttribute="top" secondItem="Vsx-wg-Ssn" secondAttribute="top" constant="170" id="9w5-sS-qX8"/>
+                                    <constraint firstAttribute="trailing" secondItem="dTn-aY-ZRK" secondAttribute="trailing" constant="16" id="xmW-Pw-RmH"/>
+                                    <constraint firstItem="dTn-aY-ZRK" firstAttribute="leading" secondItem="Vsx-wg-Ssn" secondAttribute="leading" constant="16" id="y65-Ig-Ufx"/>
+                                    <constraint firstAttribute="bottom" secondItem="dTn-aY-ZRK" secondAttribute="bottom" constant="299" id="zFs-sh-Nwy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vsx-wg-Ssn" secondAttribute="trailing" id="0Ff-OY-d65"/>
+                            <constraint firstItem="Vsx-wg-Ssn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3AX-6N-XuT"/>
                             <constraint firstItem="IZX-fG-I9Q" firstAttribute="top" secondItem="bi5-fx-eAJ" secondAttribute="bottom" constant="2" id="79J-m2-phy"/>
+                            <constraint firstItem="Vsx-wg-Ssn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="Czu-Mc-c5R"/>
                             <constraint firstItem="bi5-fx-eAJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ja6-t9-YUd"/>
+                            <constraint firstItem="Vsx-wg-Ssn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="JzJ-rw-t96"/>
+                            <constraint firstItem="Vsx-wg-Ssn" firstAttribute="top" secondItem="bi5-fx-eAJ" secondAttribute="bottom" constant="2" id="LT8-zy-d0T"/>
+                            <constraint firstAttribute="bottom" secondItem="Vsx-wg-Ssn" secondAttribute="bottom" id="WLL-Gv-O8g"/>
+                            <constraint firstItem="Vsx-wg-Ssn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gOv-ub-nWc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="bi5-fx-eAJ" secondAttribute="top" id="gyi-IU-chl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IZX-fG-I9Q" secondAttribute="trailing" id="siJ-2N-IFd"/>
                             <constraint firstItem="IZX-fG-I9Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="uJA-Jn-dI5"/>
+                            <constraint firstItem="Vsx-wg-Ssn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uX4-Zv-gcn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bi5-fx-eAJ" secondAttribute="trailing" id="wWp-kv-dBg"/>
                             <constraint firstItem="IZX-fG-I9Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zVk-06-0Ns"/>
                         </constraints>
@@ -57,6 +101,7 @@
                         <outlet property="roundedView" destination="bi5-fx-eAJ" id="IrY-Qc-iw0"/>
                         <outlet property="searchText" destination="mIt-sR-yKW" id="LKH-YH-Y5G"/>
                         <outlet property="tableView" destination="IZX-fG-I9Q" id="5K6-xl-HPG"/>
+                        <outlet property="viewAdd" destination="Vsx-wg-Ssn" id="Sr0-tL-rbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="10134" width="8000" height="5000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -11,9 +11,19 @@ import RxDataSources
 
 class MainViewController: UIViewController, Storyboardable {
     
+    @IBOutlet weak var viewAdd: UIView!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBAction func text(_ sender: Any) {
+        if searchText.text != "" {
+            viewAdd.isHidden = true
+        } else {
+            viewAdd.isHidden = false
+        }
+    }
     
     private static let cellId = "AirportID"
     
@@ -31,10 +41,12 @@ class MainViewController: UIViewController, Storyboardable {
      
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel = viewModelBuilder?((
             
             searchText : searchText.rx.text.orEmpty.asDriver(), ()
         ))
+       
         setupUI()
         setupBinding()
     }
@@ -58,3 +70,4 @@ private extension MainViewController {
             .disposed(by: bag)
     }
 }
+
