@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class MainCoordinator : BaseCoordinator {
+class SecondCoordinator : BaseCoordinator {
     
     private let navigationController : UINavigationController?
     
@@ -12,7 +12,6 @@ class MainCoordinator : BaseCoordinator {
     override func start() {
         
         let vc1 = MainViewController.instantiate()
-       
         let service = ModelService.shared
         
         vc1.viewModelBuilder = {
@@ -22,3 +21,4 @@ class MainCoordinator : BaseCoordinator {
         navigationController?.pushViewController(vc1, animated: true)
     }
 }
+

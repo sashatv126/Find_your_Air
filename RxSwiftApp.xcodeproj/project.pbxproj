@@ -31,6 +31,9 @@
 		E774F025283B71AB00623098 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774F024283B71AB00623098 /* CityViewModel.swift */; };
 		E774F02E283B979D00623098 /* AirportCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774F02C283B979D00623098 /* AirportCells.swift */; };
 		E774F02F283B979D00623098 /* AirportCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = E774F02D283B979D00623098 /* AirportCells.xib */; };
+		E7E4D41E28417B4100D619F3 /* SecondCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4D41D28417B4000D619F3 /* SecondCoordinatorTest.swift */; };
+		E7E4D4212841F0CD00D619F3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4D4202841F0CD00D619F3 /* TabBarController.swift */; };
+		E7E4D4242841F14400D619F3 /* TabPageEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4D4232841F14400D619F3 /* TabPageEX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		E774F024283B71AB00623098 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		E774F02C283B979D00623098 /* AirportCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCells.swift; sourceTree = "<group>"; };
 		E774F02D283B979D00623098 /* AirportCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportCells.xib; sourceTree = "<group>"; };
+		E7E4D41D28417B4000D619F3 /* SecondCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinatorTest.swift; sourceTree = "<group>"; };
+		E7E4D4202841F0CD00D619F3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E7E4D4232841F14400D619F3 /* TabPageEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPageEX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +125,6 @@
 				E767CAD02834D35A00AEA8EC /* MainModule */,
 				E767CACF2834D35000AEA8EC /* Coordinator */,
 				E767CAC22834C05400AEA8EC /* Other */,
-				E767CAC02834C00A00AEA8EC /* Resourses */,
 				E767CABE2834BFE100AEA8EC /* Application */,
 				E767CAAF2834BE1400AEA8EC /* Info.plist */,
 			);
@@ -142,13 +147,6 @@
 				E767CAA52834BE0F00AEA8EC /* MainViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		E767CAC02834C00A00AEA8EC /* Resourses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resourses;
 			sourceTree = "<group>";
 		};
 		E767CAC22834C05400AEA8EC /* Other */ = {
@@ -177,6 +175,9 @@
 				E767CAD42834D3E700AEA8EC /* Coordinator.swift */,
 				E767CAD72834D53700AEA8EC /* BaseCoordinator.swift */,
 				E767CADF2834DA5000AEA8EC /* AppCoordinator.swift */,
+				E7E4D41D28417B4000D619F3 /* SecondCoordinatorTest.swift */,
+				E7E4D4202841F0CD00D619F3 /* TabBarController.swift */,
+				E7E4D4232841F14400D619F3 /* TabPageEX.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -368,16 +369,19 @@
 				E767CAF7283780AF00AEA8EC /* ModelHTTPRouter.swift in Sources */,
 				E767CAA42834BE0F00AEA8EC /* SceneDelegate.swift in Sources */,
 				E767CAF128377F1E00AEA8EC /* HTTPService.swift in Sources */,
+				E7E4D41E28417B4100D619F3 /* SecondCoordinatorTest.swift in Sources */,
 				E774F025283B71AB00623098 /* CityViewModel.swift in Sources */,
 				E767CB0228378AA900AEA8EC /* Model.swift in Sources */,
 				E767CAFB2837875400AEA8EC /* ModelService.swift in Sources */,
 				E767CADD2834D64E00AEA8EC /* Storyboardable.swift in Sources */,
+				E7E4D4212841F0CD00D619F3 /* TabBarController.swift in Sources */,
 				E767CB062837B60200AEA8EC /* Network.swift in Sources */,
 				E767CAFE2837878B00AEA8EC /* ModelAPI.swift in Sources */,
 				E767CAF428377FEA00AEA8EC /* ModelHTTPService.swift in Sources */,
 				E767CAD22834D39000AEA8EC /* MainCoordinator.swift in Sources */,
 				E767CAE02834DA5000AEA8EC /* AppCoordinator.swift in Sources */,
 				E774F02E283B979D00623098 /* AirportCells.swift in Sources */,
+				E7E4D4242841F14400D619F3 /* TabPageEX.swift in Sources */,
 				E767CAC62834CE4B00AEA8EC /* MainVIewModel.swift in Sources */,
 				E767CAD82834D53700AEA8EC /* BaseCoordinator.swift in Sources */,
 			);

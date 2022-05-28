@@ -58,7 +58,7 @@ private extension MainViewController {
         
         tableView.rowHeight = 100
         tableView.register(UINib(nibName: "AirportCells", bundle: nil), forCellReuseIdentifier: MainViewController.cellId)
-        self.title = "Airports"
+        title = "Airport"
     }
     
     func setupBinding() -> Void {
