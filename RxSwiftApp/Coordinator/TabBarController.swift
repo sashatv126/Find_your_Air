@@ -16,7 +16,7 @@ class TabCoordinator: NSObject, Coordinator {
 
     var navigationController: UINavigationController
     
-    var tabBarController: UITabBarController
+    var tabBarController: MainTabBarController
 
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -70,7 +70,7 @@ class TabCoordinator: NSObject, Coordinator {
         }()
     
         navController.tabBarItem = UITabBarItem.init(title: page.pageTitleValue(),
-                                                             image: UIImage(named: "Vector-2"),
+                                                     image: UIImage(named: page.pageImage() ?? ""),
                                                              tag: page.pageOrderNumber())
         
         switch page {

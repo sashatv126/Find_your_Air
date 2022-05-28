@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		93612C787D8E5AE77264567C /* Pods_RxSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34488636B847328DF36F2521 /* Pods_RxSwiftApp.framework */; };
+		E75AF807284245E600E425A6 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75AF806284245E600E425A6 /* CustomTabBar.swift */; };
+		E75AF80B2842469100E425A6 /* TabBarControlelr .swift in Sources */ = {isa = PBXBuildFile; fileRef = E75AF80A2842469100E425A6 /* TabBarControlelr .swift */; };
 		E767CAA22834BE0F00AEA8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767CAA12834BE0F00AEA8EC /* AppDelegate.swift */; };
 		E767CAA42834BE0F00AEA8EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767CAA32834BE0F00AEA8EC /* SceneDelegate.swift */; };
 		E767CAA62834BE0F00AEA8EC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767CAA52834BE0F00AEA8EC /* MainViewController.swift */; };
@@ -40,6 +42,8 @@
 		34488636B847328DF36F2521 /* Pods_RxSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		476811B3431AD619156FCA7A /* Pods-RxSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A54F4DCED171B874CFDB1FB4 /* Pods-RxSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApp.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
+		E75AF806284245E600E425A6 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		E75AF80A2842469100E425A6 /* TabBarControlelr .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarControlelr .swift"; sourceTree = "<group>"; };
 		E767CA9E2834BE0F00AEA8EC /* RxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E767CAA12834BE0F00AEA8EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E767CAA32834BE0F00AEA8EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E75AF805284245CB00E425A6 /* HelpersUI */ = {
+			isa = PBXGroup;
+			children = (
+				E75AF806284245E600E425A6 /* CustomTabBar.swift */,
+				E75AF80A2842469100E425A6 /* TabBarControlelr .swift */,
+			);
+			path = HelpersUI;
+			sourceTree = "<group>";
+		};
 		E767CA952834BE0F00AEA8EC = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		E767CAA02834BE0F00AEA8EC /* RxSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				E75AF805284245CB00E425A6 /* HelpersUI */,
 				E767CAEB28377E1C00AEA8EC /* Service */,
 				E767CADB2834D63500AEA8EC /* Shared */,
 				E767CAD02834D35A00AEA8EC /* MainModule */,
@@ -364,9 +378,11 @@
 			files = (
 				E767CAA62834BE0F00AEA8EC /* MainViewController.swift in Sources */,
 				E767CAA22834BE0F00AEA8EC /* AppDelegate.swift in Sources */,
+				E75AF80B2842469100E425A6 /* TabBarControlelr .swift in Sources */,
 				E767CAEE28377E6200AEA8EC /* HTTPRouter.swift in Sources */,
 				E767CAD52834D3E700AEA8EC /* Coordinator.swift in Sources */,
 				E767CAF7283780AF00AEA8EC /* ModelHTTPRouter.swift in Sources */,
+				E75AF807284245E600E425A6 /* CustomTabBar.swift in Sources */,
 				E767CAA42834BE0F00AEA8EC /* SceneDelegate.swift in Sources */,
 				E767CAF128377F1E00AEA8EC /* HTTPService.swift in Sources */,
 				E7E4D41E28417B4100D619F3 /* SecondCoordinatorTest.swift in Sources */,

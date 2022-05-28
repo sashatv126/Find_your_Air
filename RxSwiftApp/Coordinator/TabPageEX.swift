@@ -21,9 +21,9 @@ enum TabBarPage {
         case .ready:
             return "Airport"
         case .steady:
-            return "Airport"
+            return "Global"
         case .go:
-            return "Airport"
+            return "My profile"
         }
     }
 
@@ -35,6 +35,17 @@ enum TabBarPage {
             return 1
         case .go:
             return 2
+        }
+    }
+    
+    func pageImage() -> String? {
+        switch self {
+        case .ready:
+            return "Vector-2"
+        case .steady:
+            return nil
+        case .go:
+            return "Layer"
         }
     }
 }
