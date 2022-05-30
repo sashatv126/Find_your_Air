@@ -46,6 +46,10 @@ class TabCoordinator: NSObject, Coordinator {
                                                        green: 15/255.0,
                                                        blue: 13/255.0,
                                                        alpha: 1.0)
+        tabBarController.tabBar.backgroundColor = UIColor(red: 14/255.0,
+                                                          green: 15/255.0,
+                                                          blue: 13/255.0,
+                                                          alpha: 1.0)
         navigationController.isNavigationBarHidden = true
         navigationController.viewControllers = [tabBarController]
     }
