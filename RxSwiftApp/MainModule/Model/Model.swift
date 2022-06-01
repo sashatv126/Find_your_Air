@@ -28,8 +28,6 @@ struct ModelResponseElement : Codable {
     let carriers: String
 }
 
-
-
 extension ModelResponseElement : Equatable {
     
     static func == (lhs : ModelResponseElement, rhs : ModelResponseElement) -> Bool {
