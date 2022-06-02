@@ -6,7 +6,7 @@ import RxDataSources
 protocol GlobalViewModelProtocol {
     
     typealias Input = (
-        weight : Driver<Weight>, ()
+        weight : Driver<Double>, ()
     )
     
     typealias Output = (
@@ -27,26 +27,29 @@ final class GlobalViewModel : GlobalViewModelProtocol {
     
     init(input : GlobalViewModelProtocol.Input) {
         self.input = input
-        self.output = GlobalViewModel.output(input: self.input)
+        self.output = GlobalViewModel.output(input: self.input, bag : bag)
     }
     
 }
 
 private extension GlobalViewModel {
     
-    static func output(input : GlobalViewModelProtocol.Input) -> GlobalViewModelProtocol.Output {
+    static func output(input : GlobalViewModelProtocol.Input, bag : DisposeBag) -> GlobalViewModelProtocol.Output {
+        
         
         let price = input
             .weight
             .asObservable()
         
-        let output = Observable
-            .of(price)
-            .map({price in
-                price
+        let output = price
+            .map({
+                Weight(bagWeight: $0)
             })
-            .map
+            .map({
+                return getWeight($0)
+            })
             .asDriver(onErrorJustReturn: 0.0)
+        
         
         return (
             cost : output, ()
@@ -54,6 +57,7 @@ private extension GlobalViewModel {
     }
     
     static func getWeight(_ input : Weight) -> Double {
+        
         let price = input.bagWeight/2 * input.perKg
         return price
     }
